@@ -1,5 +1,5 @@
 {
-  "name": "dui-lib",
+  "name": "@duydangit/dui-lib",
   "version": "1.0.0",
   "description": "DUI library",
   "main": "dist/cjs/index.js",
@@ -12,6 +12,7 @@
     "LICENSE"
   ],
   "private": false,
+  "repository": "git://github.com/duydangit/dui-lib.git",
   "publishConfig": {
     "registry":"https://npm.pkg.github.com"
   },
