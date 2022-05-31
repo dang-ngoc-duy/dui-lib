@@ -1,8 +1,10 @@
 import React from 'react';
 import { ButtonType } from './Button.types';
-import './Button.css';
+import buttonStyle from './style';
+import clsx from 'clsx';
 
 const Button: React.FC<ButtonType> = (props) => {
+    const classes = buttonStyle();
     const {
         label,
         className,
@@ -16,14 +18,14 @@ const Button: React.FC<ButtonType> = (props) => {
     } = props;
     return (
         <button
-            className={`dui-button
-                        ${className ? className : null}
-                        ${btnType ? btnType : null}
-                        ${size ? `button-${size}` : null}
-                        ${`button-${rounded}`}
-                        ${isActive === true ? 'active' : null}
-                        ${isDisabled === true ? 'disabled' : null}
-                    `}
+            className={clsx(classes.root,
+                        className ? className : null,
+                        btnType ? btnType : null,
+                        size ? `button-${size}` : null,
+                        `button-${rounded}`,
+                        isActive === true ? 'active' : null,
+                        isDisabled === true ? 'disabled' : null,
+                       )}
             disabled={isDisabled ?? false}
             onClick={onClick}
             style={styles}>
