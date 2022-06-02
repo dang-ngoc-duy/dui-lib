@@ -2,8 +2,8 @@
   "name": "@duydangit/dui-lib",
   "version": "1.0.0",
   "description": "DUI library",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
   "author": "duydangit24",
   "license": "ISC",
   "files": [
@@ -19,7 +19,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "rm -rf dist",
+    "prebuild": "rm -rf lib",
     "rollup-watch": "rollup -c -w",
     "build": "rm -rf lib && rollup -c",
     "storybook": "start-storybook -p 6006",
