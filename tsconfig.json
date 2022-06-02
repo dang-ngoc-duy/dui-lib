@@ -1,29 +1,23 @@
 {
-    "compilerOptions": {
-        "module": "esnext",
-        "target": "es5",
-        "lib": ["es6", "dom"],
-        "sourceMap": true,
-        "jsx": "react-jsx",
-        "moduleResolution": "node",
-        "rootDir": "src",
-        "noImplicitReturns": false,
-        "noImplicitThis": true,
-        "noImplicitAny": true,
-        "strictNullChecks": true,
-        "esModuleInterop": true,
-        "baseUrl": "src/",
-        "paths": {
-            "components": ["src/components/*"],
-            "types": ["src/types/*"],
-            "utils": ["src/utils/*"]
-        }
-    },
-    "exclude": [
-        "node_modules",
-        "build",
-        "dist",
-        "scripts",
-    ],
-    "types": ["typePatches"]
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "jsx": "react",
+    "module": "esnext",  
+    "declaration": true,
+    "declarationDir": "types",
+    "sourceMap": true,
+    "outDir": "lib",
+    "moduleResolution": "node",
+    "emitDeclarationOnly": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+  },
+  "exclude": [
+    "lib",
+    "node_modules",
+    "src/**/*.test.tsx",
+    "src/**/*.stories.tsx",
+  ],
 }
